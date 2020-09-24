@@ -1,0 +1,117 @@
+$colors: (
+    dark: #2D2F2E,
+    green: #648527,
+    grey: #EDE8E8,
+
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+}
+
+/* Navigation bar */ 
+
+nav {
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+.bg-light {
+    background-color: white !important;
+}
+
+.navbar-brand img {
+    height: 70px;
+}
+
+.nav-link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    margin-left: 2rem;
+    color: #2D2F2E !important;
+    line-height: 20px;
+}
+
+.green-hover:hover {
+    color: color(green) !important;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.active {
+    color: color(green) !important;
+    text-decoration: underline;
+    text-underline-position: under;
+
+}
+
+/* HEADER */
+
+.black-box {
+    text-transform: none;
+    background-color: black;
+    color: color(grey);
+    border-radius: 5px;
+    padding: 2rem 2rem;
+}
+
+.col-lg-5 .black-box {
+    position: absolute;
+    right: 22px;
+}
+
+.custom__banner {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('images/banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* STORY SECTION */
+
+.story {
+    margin-top: 10rem;
+    margin-left: 10rem;
+    margin-right: 6rem;
+    margin-bottom: 10rem;
+}
+.green-line {
+    position: absolute;
+    top: 0px;
+    left: -10px;
+}
+
+.story__img {
+    max-width: 600px;
+    max-height: 70vh;
+    filter: drop-shadow(9px 10px 1px rgba(0, 0, 0, 0.2));
+}
+
+.story__illstration {
+    position: absolute;
+    bottom: -150px;
+    right: 50px;
+}
+
+.food__illstration {
+    position: absolute;
+    top: -150px;
+    left: -20px;
+}
