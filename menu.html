@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu | GYM RESTAURANT</title>
+    <!-- Bootstrap's CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- My custom CSS styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Javascript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </head>
+
+<body>
+    <!-- Spacing top & buttom - Standard navbar - display vertically on large displays - fixed to top while scrolling - White background -->
+    <nav class="navbar navbar-expand-md fixed-top mb-3 navbar-light bg-light">
+        <div class="container">
+            <!-- Class for logo/brand -->
+            <a href="#" class="navbar-brand"><img class="logo" src="images/logo.png"></a>
+            <!-- This is mobile menu - It's collapsed by default on large screens - Toggled by button upon click -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <!-- Items targeted for mobile menu -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Menu items - aligned left - Standard classes for links / list items below-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                        <a href="/index" class="green-hover nav-link" aria-current="page">HOME</a>
+                        </li> 
+                        <li class="nav-item">
+                        <a href="#" class="green-hover nav-link active">MENU</a>
+                        </li>  
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <!-- Custom class for layout tweaking -->
+    <main class="menu__page">
+            <!-- Container for left & right margins -->
+            <div class="container">
+                <!-- Row for h1, text centered -->
+                <div class="row text-center">
+                    <!-- Full width column for h1 -->
+                    <div class="col-md-12">
+                        <h1>MENU</h1>
+                        <!-- Custom classes for offsetting illustrations -->
+                        <img class="green-line" src="images/green-line-horizontal.png">
+                        <img class="flags" src="images/flags.svg">
+                    </div>
+                </div>
+                <!-- Row for food-menu items -->
+                <div class="row">
+                    <!-- All columns take up 1/3 of width, break to full width on tablet -->
+                    <div class="col-md-4">
+                        <h2>starter</h2>
+                        <h3>beet root cured salmon</h3>
+                        <p>- served on toasted sour dough with dill mayo and pickled red onions</p>
+                        <!-- Custom class for making the price tags look different from global p-tags -->
+                        <p class="price">100 dkk.</p>
+                        <h3>deer carpaccio</h3>
+                        <p>- with matured Maribo cheese, kale, rapseed oil and lemon</p>
+                        <p class="price">150 dkk.</p>
+                        <h3>soup of the day</h3>
+                        <p>- it's definately tasty! but our waiter will know a lot more.</p>
+                        <p class="price">90 dkk.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>main</h2>
+                        <h3>pan fried trout</h3>
+                        <p>- mashed potatoes, capers-lemon butter and bunch of fresh dill</p>
+                        <p class="price">210 dkk.</p>
+                        <h3>tenderloin of veal</h3>
+                        <p>- with a potent demi-glace, sunchockes and some Lolland greens</p>
+                        <p class="price">290 dkk.</p>
+                        <h3>slow-cooked pork shoulder</h3>
+                        <p>- roasted root vegetables, pickled red onions and spring salad</p>
+                        <p class="price">180 dkk.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>dessert</h2>
+                        <h3>black ris alamand</h3>
+                        <p>- made from black rice with a compote of wild cherries.</p>
+                        <p class="price">110 dkk.</p>
+                        <h3>crème brûlée</h3>
+                        <p>- crème brûlée doesn't need any side, but we do serve it with fresh berries</p>
+                        <p class="price">90 dkk.</p>
+                    </div>
+                </div>
+            </div>
+    </main>
+ 
+
+     <footer>
+         <!-- New container for footer-->
+         <div class="container">
+             <!-- Row were boxes belowed are centered -->
+             <div class="row justify-content-center">
+                 <!-- Full width column for top logo -->
+                 <div class="col-12 text-center">
+                     <img src="images/logo-light.png" alt="">
+                 </div>
+                    <!-- All boxes below take up 1/3 of footer, break to full width on tablet. Plus extra class for design tweaking. -->
+                    <div class="col-lg-4 col-md-12 footer__box">
+                        <h3>Contact Us</h3>
+                            <ul>
+                                <li><img src="images/location.svg">Engestoftevej 1, 4990 Saksköbing</li>
+                                <li><img src="images/email.svg">gym@fjelde.dk</li>
+                                <li><img src="images/phone.svg">+45 12 34 56 78</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 footer__box">
+                        <h3>We are also here</h3>
+                        <ul>
+                            <li><img src="images/facebook.svg">Meet us on Facebook</li>
+                            <li><img src="images/instagram.svg">Follow us on Instagram</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-12 footer__box">
+                        <h3>Opening hours</h3>
+                        <ul>
+                            <li>Sunday - Thursday<br>
+                                16.00 - 21.00</li>
+                            <li>Friday - Saturday<br>
+                                16.00 - 22.00</li>
+                        </ul>
+                    </div>
+                </div>
+         </div>
+     </footer>  
+</body>
+<!-- Time to wash the dishes -->
+</html>

@@ -1,3 +1,7 @@
+/* GLOBAL STYLES */ 
+
+/* Basic stuff */
+
 $colors: (
     dark: #2D2F2E,
     green: #648527,
@@ -6,12 +10,12 @@ $colors: (
 );
 
 @function color($color-name) {
-    @return map-get($colors, $color-name)
-}
+    @return map-get($colors, $color-name)};
 
 h1 {
     font-family: 'Quicksand', sans-serif;
     text-transform: uppercase;
+    font-size: 60px;
 }
 
 h2 {
@@ -21,16 +25,30 @@ h2 {
     font-weight: 400;
 }
 
-p {
+h3 {
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+
+body {
     font-family: 'Crimson Text', serif;
     font-size: 20px;
 }
 
-/* Navigation bar */ 
+
+/* Global - Navigation bar */ 
 
 nav {
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
+
 .bg-light {
     background-color: white !important;
 }
@@ -57,10 +75,80 @@ nav {
     color: color(green) !important;
     text-decoration: underline;
     text-underline-position: under;
-
 }
 
-/* HEADER */
+@media screen and (max-width: 770px){
+    nav {
+    text-align: center;
+    }
+}
+
+@media screen and (max-width: 770px){
+    a.nav-link {
+        padding-bottom: 20px;
+      }
+}
+
+@media screen and (max-width: 770px){
+    .nav-item:first-child {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .nav-item:last-child {
+        padding-bottom: 50px;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: color(dark);
+    color: color(grey);
+    margin-top: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    img {
+        width: 200px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        padding-top: 0.5rem;
+    }
+
+    li {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        margin-top: 1rem;
+
+            img {
+                height: 25px;
+                width: 25px;
+                margin-left: -10px;
+                margin-right: 10px;
+            }
+    }
+
+    @media screen and (max-width: 960px){
+        .col-md-12 {
+            text-align: center;
+        }
+    }
+
+    .footer__box {
+        margin-top: 4rem;
+    }
+}
+
+
+/* Frontpage specific code */ 
+
+/* Frontpage - HEADER */
 
 .black-box {
     text-transform: none;
@@ -68,6 +156,15 @@ nav {
     color: color(grey);
     border-radius: 5px;
     padding: 2rem 2rem;
+}
+
+@media screen and (max-width: 991px){
+    .black-box {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        margin-right: -22px;
+    }
 }
 
 .col-lg-5 .black-box {
@@ -82,11 +179,10 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
 
-  /* STORY SECTION */
 
-  TÉÉÉÉÉKKKKKAAA HVORT ÞÚ GETUR NOTAÐ MARGIN-CLASSES FRÁ BOOTSTRAP !! ! ! !!
+/* Frontpage - STORY SECTION */
 
 .story {
     margin-top: 10rem;
@@ -94,6 +190,7 @@ nav {
     margin-right: 6rem;
     margin-bottom: 10rem;
 }
+
 .green-line {
     position: absolute;
     top: 0px;
@@ -106,14 +203,128 @@ nav {
     filter: drop-shadow(9px 10px 1px rgba(0, 0, 0, 0.2));
 }
 
+@media screen and (max-width: 720px){
+    .story__img {
+        max-width: 100%; 
+    }
+}
+
 .story__illstration {
     position: absolute;
     bottom: -150px;
     right: 50px;
 }
 
+@media screen and (max-width: 990px){
+    .story__illstration {
+        position: absolute;
+        bottom: -100px;
+        right: 70px;
+        height: 150px;
+    }
+}
+
+.story__text {
+    margin: 0;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 720px){
+    .story__img--wrapper {
+        margin-bottom: 4rem;
+    }
+}
+
+
+/* Frontpage - FOOD SECTION */
+
 .food__illstration {
     position: absolute;
     top: -150px;
     left: -20px;
+}
+
+@media screen and (max-width: 990px){
+    .food__illstration {
+        position: absolute;
+        top: -100px;
+        left: -20px;
+        height: 120px;
+    }
+}
+
+#food-images {
+    img {
+    border-radius: 2%;
+    }
+
+    h2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    p {
+        padding-bottom: 2rem;
+    }
+    
+    img {
+        margin-top: 2rem;
+    }
+}
+
+
+/* Menu page specific code*/
+
+/* All styles */
+
+.menu__page {
+    padding-top: 10rem;
+
+    h1 {
+        margin-bottom: 4rem;
+    }
+    
+    h2 {
+        text-transform: none;
+        padding-bottom: 2rem;
+    }
+
+    h3 {
+        text-transform: none;
+        font-weight: 400;
+        padding-top: 1rem;
+    }
+
+    .price {
+        text-align: right;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .green-line {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+    }
+
+    .flags {
+        position: absolute;
+        bottom: 30%;
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .flags {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .flags {
+        display: none;
+    }
 }

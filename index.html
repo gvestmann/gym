@@ -34,11 +34,8 @@
                         <a href="#" class="nav-link active" aria-current="page">HOME</a>
                         </li> 
                         <li class="nav-item">
-                        <a href="#" class="green-hover nav-link">MENU</a>
-                        </li> 
-                        <li class="nav-item">
-                        <a href="#" class="green-hover nav-link">RESERVATIONS</a>
-                        </li> 
+                        <a href="/menu" class="green-hover nav-link">MENU</a>
+                        </li>  
                     </ul>
                 </div>
         </div>
@@ -51,8 +48,8 @@
         <div class="container h-100">
             <!-- Row + align items center vertically -->
             <div class="row h-100 align-items-center">
-            <!-- Full width column, text center horizontally-->
-                <div class="col-lg-5 text-center ml-auto">
+            <!-- Full width column, text center horizontally + bootstrap class: margin-left auto-->
+                <div class="col-lg-5 col-md-10 text-center ml-auto">
                     <h2 class="black-box">Awesome, tasty food - made with some of Lolland’s best produce.</h2>
                 </div>
             </div>
@@ -62,27 +59,23 @@
      <main>
          <!-- Class for custom margins -->
          <section class="story">
-            <!-- Container for standard margins -->
-            <!-- <div class="container"> -->
                 <!-- First row -->
                 <div class="row h-100 align-items-center">
-                    <!-- Column half screen for tablets and larger -->
-                    <div class="col-md-4">
+                    <!-- Column full screen for tablets and larger, 1/4 for larger displays -->
+                    <div class="col-lg-4 col-md-12 story__text">
                         <img class="green-line" src="images/green-vertical-line.svg">
                         <h2>The Story</h2>
                         <p>GYM BISTRO first opened its’ doors in 2020. It’s situated inside the charming Fjelde Guesthouse, near Saksköbing, Lolland. Our dining hall used to be a gymnasium, since the house itself used to be a children’s school. In the spirit of all this, we try to keep our restaurant a bit playful.</p>
                         <p>We are located in one of Denmarks main agricultural areas, so we prepare our food from some of Lolland’s finest produce. Our menu changes frequently based on seasons and moods. We like to keep it simple, honest - but most importantly - lipsmacking good.</p>
                     </div>
-                    <!-- Column half screen for tablets and larger -->
-                    <div class="col-lg-7 d-flex justify-content-center ml-auto">
+                    <!-- Column, 7/12 for larger displays, full width for tablets and larger, also custom class for some mobile layout tweaks -->
+                    <div class="col-lg-7 col-md-12 justify-content-center ml-auto story__img--wrapper">
                         <!-- Images with class fluid for responsiveness-->
                         <img class="fluid story__img" src="images/gym-bistro-1.jpg">
+                        <!-- Custom class to make the "Sun - Mountain" illustration offset -->
                         <img class="story__illstration" src="images/sun-mountain.svg">
                     </div>
-
-                <!-- </div> -->
-            </div>
-
+                </div>
         </section>
         <!-- Images section -->
         <section id="food-images">
@@ -92,6 +85,7 @@
                 <div class="row justify-content-center">
                     <!-- Full width column, text aligned center horizontally -->
                     <div class="col text-center">
+                        <!-- Custom class to make "Flags" illustration offset -->
                         <img class="food__illstration" src="images/flags.svg">
                         <h2>Our food</h2>
                         <p>All this food was eaten by someone else. We’re looking forward to welcoming you!</p>
@@ -106,33 +100,52 @@
                     <div class="col-lg-4 col-md-12 justify-content-center">
                         <img class="img-fluid" src="images/food-2.jpg">
                     </div>
-                    <div class="col-lg-4 col-md-12 justify-content-center">
+                    <div class="col-lg-4 col-md-12 justify-content-center cover">
                         <img class="img-fluid" src="images/food-3.jpg">
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Section for Happy hour -->
-        <section id="happy-hour">
-            <!-- As before, container so the row doesn't go full width -->
-            <div class="container">
-                <!-- First row, content aligned center-->
-                <div class="row justify-content-center">
-                    <!-- Column for image, on large displays it takes up 1/4 of the screen. Same as the column below -->
-                    <div class="col-lg-3">
-                        <img class="fluid" src="images/krenkerup-1.png">
+     </main>   
+     <footer>
+         <!-- Container for footer - Mainly for margins -->
+         <div class="container">
+             <!-- First row, boxes below centered -->
+             <div class="row justify-content-center">
+                 <!-- Full width column for logo on top-->
+                 <div class="col-12 text-center">
+                     <img src="images/logo-light.png" alt="">
+                 </div>
+                    <!-- This column and next make up 1-3 of footer area on larger displays - full width on tablet and below - There's a custom class for some tweaking of overall look -->
+                    <div class="col-lg-4 col-md-12 footer__box">
+                        <h3>Contact Us</h3>
+                            <ul>
+                                <li><img src="images/location.svg">Engestoftevej 1, 4990 Saksköbing</li>
+                                <li><img src="images/email.svg">gym@fjelde.dk</li>
+                                <li><img src="images/phone.svg">+45 12 34 56 78</li>
+                            </ul>
                     </div>
-                    <div class="col-lg-3">
-                        <img class="fluid" src="images/krenkerup-2.png">
+                    <!-- Second column -->
+                    <div class="col-lg-4 col-md-12 footer__box">
+                        <h3>We are also here</h3>
+                        <ul>
+                            <li><img src="images/facebook.svg">Meet us on Facebook</li>
+                            <li><img src="images/instagram.svg">Follow us on Instagram</li>
+                        </ul>
                     </div>
-                    <!-- This column takes up half the screen on larger devices -->
-                    <div class="col-lg-6">
-                        <h2>Happy Hour!</h2>
-                        <p>Happy hour at GYM is actually 2 hours! Every day from 16.00-18.00  a bottle of Krenkerup öl is 50 DKK, glas of wine is 50 DKK and Gin&Tonic is 50 DKK. We also serve some bar-snacks until the kitchen opens at 18.00.</p>
+                    <!-- Third column, a little smaller on larger displays, full width on mobile and tablet -->
+                    <div class="col-lg-3 col-md-12 footer__box">
+                        <h3>Opening hours</h3>
+                        <ul>
+                            <li>Sunday - Thursday<br>
+                                16.00 - 21.00</li>
+                            <li>Friday - Saturday<br>
+                                16.00 - 22.00</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-     </main>     
+         </div>
+     </footer>  
 </body>
+<!-- That's it, folks!-->
 </html>
